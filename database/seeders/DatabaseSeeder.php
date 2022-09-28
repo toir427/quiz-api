@@ -19,15 +19,15 @@ class DatabaseSeeder extends Seeder
         $users = [
             User::ROLE_ADMIN => [
                 'name' => 'Toir',
-                'email' => 'info@useful.uz',
+                'email' => 'info@jwt.lc',
             ],
             User::ROLE_MODERATOR => [
                 'name' => 'Moderator',
-                'email' => 'moderator@useful.uz',
+                'email' => 'moderator@jwt.lc',
             ],
             User::ROLE_USER => [
                 'name' => 'User',
-                'email' => 'user@useful.uz',
+                'email' => 'user@jwt.lc',
             ],
         ];
         $collect = collect([
@@ -42,7 +42,7 @@ class DatabaseSeeder extends Seeder
             $rand = array_rand(User::$genders);
             $collect->put('gender', User::$genders[$rand]);
             $collect->put('status', User::STATUS_ACTIVE);
-            $collect->put('birthday', date('1996.01.04'));
+            $collect->put('birthday', date('2000.04.04'));
 
             $user = User::create($collect->merge($data)->all());
             $this->createUser($role, $user);
