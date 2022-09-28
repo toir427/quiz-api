@@ -12,7 +12,7 @@ composer install
 
 ```bash
 wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
-echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" |sudo tee  /etc/apt/sources.list.d/pgdg.list
+echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" |sudo tee /etc/apt/sources.list.d/pgdg.list
 sudo apt update
 sudo apt -y install postgresql-13 postgresql-client-13
 sudo su - postgres
@@ -55,15 +55,15 @@ DB_PASSWORD=lljwt         # database user password
 ```apacheconf
 <VirtualHost *:80>
         ServerName jwt.lc
-	ServerAlias www.jwt.lc
+        ServerAlias www.jwt.lc
 
         ServerAdmin webmaster@jwt.lc
-        DocumentRoot "/Users/toir427/Sites/jwt/public"
+        DocumentRoot "/Users/user/Sites/jwt/public"
 
         ErrorLog "/private/var/log/apache2/jwt-error_log"
         CustomLog "/private/var/log/apache2/jwt-access_log" common
 
-        <Directory /Users/toir427/Sites/jwt/public >
+        <Directory /Users/user/Sites/jwt/public >
 		Options Indexes FollowSymLinks MultiViews
 		AllowOverride All
 		Order allow,deny
