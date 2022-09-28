@@ -93,7 +93,7 @@ DB_PASSWORD=lljwt         # database user password
 curl --location --request POST 'http://127.0.0.1:8000/api/auth/register' \
 --header 'Content-Type: application/json' \
 --form 'name="Useful"' \
---form 'email="info@useful.uz"' \
+--form 'email="info@jwt.lc"' \
 --form 'password="random1"' \
 --form 'password_confirmation="random1"'
 ```
@@ -101,7 +101,7 @@ curl --location --request POST 'http://127.0.0.1:8000/api/auth/register' \
 ## Check user exist or not
 
 ```bash
-curl --location --request POST 'http://127.0.0.1:8000/api/auth/login?email=info@useful.uz&password=random1'
+curl --location --request POST 'http://127.0.0.1:8000/api/auth/login?email=info@jwt.lc&password=random1'
 ```
 
 # Fake data by seeder and factory
